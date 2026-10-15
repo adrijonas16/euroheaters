@@ -14,9 +14,9 @@ export function Hero() {
             Temperatura <span>Modular</span>
           </h1>
           <p className="hero__description">
-            Sistema de control de temperatura de alto rendimiento para moldes
-            con canales calientes. Más de 50 años de experiencia respaldando
-            cada módulo con tecnología de última generación.
+            Pirómetros digitales con microprocesador de alta tecnología en
+            formato normalizado de 48 x 96mm. Diseñados para inyección por
+            colada caliente con más de 50 años de experiencia en el mercado.
           </p>
 
           <div className="hero__stats">
