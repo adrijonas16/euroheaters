@@ -1,6 +1,11 @@
+import type { Series } from '../data/product'
 import { SERIES } from '../data/product'
 
-export function SeriesSection() {
+interface SeriesSectionProps {
+  onProductClick: (product: Series) => void
+}
+
+export function SeriesSection({ onProductClick }: SeriesSectionProps) {
   return (
     <section className="section" id="series">
       <div className="section__inner">
@@ -15,7 +20,14 @@ export function SeriesSection() {
 
         <div className="series-grid stagger-children">
           {SERIES.map((series) => (
-            <article className="series reveal" key={series.name}>
+            <article
+              className="series reveal"
+              key={series.name}
+              onClick={() => onProductClick(series)}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => e.key === 'Enter' && onProductClick(series)}
+            >
               <div className="series__image-wrapper">
                 <img
                   src={series.image}
@@ -32,6 +44,7 @@ export function SeriesSection() {
                     <span className="series__tag" key={tag}>{tag}</span>
                   ))}
                 </div>
+                <span className="series__cta">Ver detalle del producto →</span>
               </div>
             </article>
           ))}

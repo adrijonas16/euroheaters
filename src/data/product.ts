@@ -11,10 +11,18 @@ export interface Spec {
 }
 
 export interface Series {
+  id: string
   image: string
   name: string
   description: string
   tags: string[]
+  detail: SeriesDetail
+}
+
+export interface SeriesDetail {
+  fullDescription: string
+  specs: { label: string; value: string }[]
+  applications: string[]
 }
 
 export interface Benefit {
@@ -73,25 +81,79 @@ export const SPECS: Spec[] = [
 
 export const SERIES: Series[] = [
   {
+    id: 'serie-5',
     image: '/images/ctrl4.jpg',
     name: 'Serie 5',
     description:
       'Módulos individuales o armarios de 2 a 48 zonas. Ideal para aplicaciones que requieren flexibilidad con potencia de 15A por zona.',
     tags: ['2 a 48 zonas', 'Modular', '15A / 3,600W'],
+    detail: {
+      fullDescription:
+        'La Serie 5 ofrece módulos individuales o armarios configurables de 2 a 48 zonas, diseñados para máxima flexibilidad. Cada módulo cuenta con pirómetro digital de microprocesador en formato normalizado de 48 x 96mm con programación accesible mediante teclado frontal.',
+      specs: [
+        { label: 'Potencia por zona', value: '15A / 3,600W máx.' },
+        { label: 'Zonas', value: '2 a 48 zonas' },
+        { label: 'Voltaje', value: '85–260 VAC, 50/60 Hz' },
+        { label: 'Formato módulo', value: '48 x 96 mm' },
+        { label: 'Protección', value: 'IP65' },
+        { label: 'Gabinete', value: 'Rack aluminio 19"' },
+      ],
+      applications: [
+        'Moldes de inyección de plástico con colada caliente',
+        'Líneas de producción con cambio frecuente de molde',
+        'Operaciones que requieren configuración flexible de zonas',
+      ],
+    },
   },
   {
+    id: 'serie-mundial',
     image: '/images/serie-mundial.jpg',
     name: 'Serie Mundial',
     description:
       'Módulos con certificación bajo normas internacionales. Diseñados para operaciones globales, compatibles con voltaje 85–260 VAC.',
     tags: ['Normas Internacionales', 'Certificado', '85–260 VAC'],
+    detail: {
+      fullDescription:
+        'La Serie Mundial está diseñada bajo normas internacionales para garantizar compatibilidad en operaciones globales. Sus módulos incluyen protección electrónica avanzada contra malfuncionamiento y disipación eficaz de calor mediante protección de triacs.',
+      specs: [
+        { label: 'Potencia por zona', value: '15A / 3,600W máx.' },
+        { label: 'Certificación', value: 'Normas internacionales CE' },
+        { label: 'Voltaje', value: '85–260 VAC, 50/60 Hz' },
+        { label: 'Formato módulo', value: '48 x 96 mm' },
+        { label: 'Protección', value: 'IP65' },
+        { label: 'Disipación', value: 'Protección de triacs optimizada' },
+      ],
+      applications: [
+        'Plantas con estándares internacionales de manufactura',
+        'Exportación de equipos a mercados globales',
+        'Operaciones multinacionales con requerimientos CE',
+      ],
+    },
   },
   {
+    id: 'serie-8',
     image: '/images/ctrl6.jpg',
     name: 'Serie 8',
     description:
       'Módulos compactos dobles de 2 a 48 zonas con opción de 30A. Perfecto para instalaciones de gran escala que requieren alta potencia.',
     tags: ['2 a 48 zonas', 'Compacto', '30A / 7,200W'],
+    detail: {
+      fullDescription:
+        'La Serie 8 presenta módulos compactos dobles que optimizan espacio sin sacrificar potencia. Con opción de salida a 30A, es la solución ideal para moldes de gran tamaño que demandan alta potencia por zona. Reducción significativa en tamaño y apariencia final del gabinete.',
+      specs: [
+        { label: 'Potencia por zona', value: '30A / 7,200W máx.' },
+        { label: 'Zonas', value: '2 a 48 zonas' },
+        { label: 'Voltaje', value: '85–260 VAC, 50/60 Hz' },
+        { label: 'Diseño', value: 'Módulos compactos dobles' },
+        { label: 'Protección', value: 'IP65' },
+        { label: 'Gabinete', value: 'Reducido en tamaño' },
+      ],
+      applications: [
+        'Moldes de gran tamaño con alta demanda de potencia',
+        'Instalaciones con espacio limitado para controladores',
+        'Producción de piezas automotrices y electrodomésticos',
+      ],
+    },
   },
 ]
 
