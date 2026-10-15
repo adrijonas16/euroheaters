@@ -48,11 +48,6 @@
   100% { background-position: 0% 50%; }
 }
 
-@keyframes count-line {
-  from { width: 0; }
-  to { width: 100%; }
-}
-
 @keyframes shimmer {
   0% { background-position: -200% 0; }
   100% { background-position: 200% 0; }
@@ -195,6 +190,12 @@
   color: var(--white);
   cursor: pointer;
   padding: 8px;
+  z-index: 10;
+}
+
+/* CTA actions */
+.cta-actions {
+  margin-top: 36px;
 }
 
 /* ===== HERO ===== */
@@ -893,6 +894,23 @@
 
   .navbar-links {
     display: none;
+    position: fixed;
+    inset: 0;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    background: rgba(26, 26, 46, 0.98);
+    backdrop-filter: blur(20px);
+    z-index: 5;
+  }
+
+  .navbar-links.open {
+    display: flex;
+  }
+
+  .navbar-links a {
+    font-size: 18px;
   }
 
   .mobile-menu-btn {
