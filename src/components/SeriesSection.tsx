@@ -3,11 +3,11 @@ import { SERIES } from '../data/product'
 export function SeriesSection() {
   return (
     <section className="section" id="series">
-      <div className="section-inner">
+      <div className="section__inner">
         <div className="reveal">
-          <div className="section-label">Línea de Productos</div>
-          <h2 className="section-title">Tres series, una solución</h2>
-          <p className="section-subtitle">
+          <div className="section__label">Línea de Productos</div>
+          <h2 className="section__title">Tres series, una solución</h2>
+          <p className="section__subtitle">
             Seleccione la serie que mejor se adapte a las necesidades de
             su operación.
           </p>
@@ -15,20 +15,21 @@ export function SeriesSection() {
 
         <div className="series-grid stagger-children">
           {SERIES.map((series) => (
-            <article className="series-card reveal" key={series.name}>
-              <div className="series-image-wrapper">
+            <article className="series reveal" key={series.name}>
+              <div className="series__image-wrapper">
                 <img
                   src={series.image}
                   alt={`${series.name} — ${series.tags.join(', ')}`}
-                  className="series-image"
+                  className="series__image"
+                  loading="lazy"
                 />
               </div>
-              <div className="series-content">
-                <h3 className="series-name">{series.name}</h3>
-                <p className="series-desc">{series.description}</p>
-                <div className="series-specs">
+              <div className="series__content">
+                <h3 className="series__name">{series.name}</h3>
+                <p className="series__desc">{series.description}</p>
+                <div className="series__tags">
                   {series.tags.map((tag) => (
-                    <span className="series-spec-tag" key={tag}>{tag}</span>
+                    <span className="series__tag" key={tag}>{tag}</span>
                   ))}
                 </div>
               </div>
