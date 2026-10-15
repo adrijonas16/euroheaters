@@ -89,10 +89,44 @@ export const SERIES: Series[] = [
   },
 ]
 
+export interface Benefit {
+  icon: string
+  title: string
+  description: string
+}
+
+export const BENEFITS: Benefit[] = [
+  {
+    icon: 'check',
+    title: 'Operación continua ante fallas',
+    description:
+      'Compensación automática ante falla de termocupla con cambio a funcionamiento manual, manteniendo su molde en operación.',
+  },
+  {
+    icon: 'check',
+    title: 'Precio competitivo del mercado',
+    description:
+      'Ofrecemos el mejor precio del mercado con entrega inmediata, garantía completa y asesoramiento técnico incluido.',
+  },
+  {
+    icon: 'check',
+    title: 'Reducción de tiempos de paro',
+    description:
+      'El diagnóstico preventivo y el diseño modular permiten identificar y resolver problemas sin detener la producción.',
+  },
+  {
+    icon: 'check',
+    title: 'Aplicación universal en colada caliente',
+    description:
+      'Compatible con cualquier sistema de inyección por colada caliente para moldes plásticos, independientemente del fabricante.',
+  },
+]
+
 export const NAV_LINKS = [
   { href: '#producto', label: 'Producto' },
   { href: '#caracteristicas', label: 'Características' },
   { href: '#especificaciones', label: 'Especificaciones' },
+  { href: '#beneficios', label: 'Beneficios' },
   { href: '#series', label: 'Series' },
   { href: '#contacto', label: 'Contacto' },
 ]

@@ -80,6 +80,7 @@ const ICONS: Record<string, React.ReactNode> = {
       <line x1="6" y1="6" x2="18" y2="18" />
     </>
   ),
+  check: <polyline points="20 6 9 17 4 12" />,
 }
 
 export function Icon({ name, size = 24 }: IconProps) {

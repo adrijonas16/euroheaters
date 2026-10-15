@@ -95,11 +95,6 @@
 .navbar__logo {
   display: flex;
   align-items: center;
-  gap: 2px;
-  color: var(--white);
-  font-weight: 700;
-  font-size: 22px;
-  letter-spacing: -0.5px;
   transition: transform 0.3s;
 }
 
@@ -107,8 +102,9 @@
   transform: scale(1.03);
 }
 
-.navbar__logo span {
-  color: var(--primary);
+.navbar__logo-img {
+  height: 40px;
+  width: auto;
 }
 
 .navbar__links {
@@ -750,6 +746,64 @@
 }
 
 /* ============================
+   BENEFITS (Block)
+   ============================ */
+.benefits {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  margin-top: 72px;
+}
+
+.benefit {
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+  padding: 28px;
+  background: var(--white);
+  border: 1px solid var(--gray-200);
+  border-radius: 16px;
+  transition: border-color 0.3s, box-shadow 0.3s, transform 0.3s;
+}
+
+.benefit:hover {
+  border-color: transparent;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.06);
+  transform: translateY(-4px);
+}
+
+.benefit__icon {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  background: rgba(34, 139, 34, 0.08);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #228b22;
+  transition: background 0.3s, color 0.3s;
+}
+
+.benefit:hover .benefit__icon {
+  background: #228b22;
+  color: var(--white);
+}
+
+.benefit__title {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+}
+
+.benefit__text {
+  font-size: 14px;
+  color: var(--gray-500);
+  line-height: 1.65;
+}
+
+/* ============================
    CTA (Block)
    ============================ */
 .cta {
@@ -866,7 +920,8 @@
   }
 
   .features,
-  .series-grid {
+  .series-grid,
+  .benefits {
     grid-template-columns: 1fr 1fr;
     gap: 20px;
   }
@@ -941,7 +996,8 @@
   }
 
   .features,
-  .series-grid {
+  .series-grid,
+  .benefits {
     grid-template-columns: 1fr;
     gap: 16px;
   }

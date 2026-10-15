@@ -4,6 +4,7 @@ import { Navbar } from './components/Navbar'
 import { Hero } from './components/Hero'
 import { Features } from './components/Features'
 import { Specs } from './components/Specs'
+import { Benefits } from './components/Benefits'
 import { SeriesSection } from './components/SeriesSection'
 import { Contact } from './components/Contact'
 import { Footer } from './components/Footer'
@@ -20,6 +21,7 @@ function App() {
         <Hero />
         <Features />
         <Specs />
+        <Benefits />
         <SeriesSection />
         <Contact />
       </main>
