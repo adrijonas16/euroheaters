@@ -5,9 +5,10 @@ import { Icon } from './Icon'
 interface ProductModalProps {
   product: Series | null
   onClose: () => void
+  onQuoteClick: (seriesName: string) => void
 }
 
-export function ProductModal({ product, onClose }: ProductModalProps) {
+export function ProductModal({ product, onClose, onQuoteClick }: ProductModalProps) {
   useEffect(() => {
     if (product) {
       document.body.style.overflow = 'hidden'
@@ -83,9 +84,12 @@ export function ProductModal({ product, onClose }: ProductModalProps) {
         </div>
 
         <div className="modal__footer">
-          <a href="mailto:ventas@euroheaters.mx" className="btn btn--primary-solid">
+          <button
+            className="btn btn--primary-solid"
+            onClick={() => onQuoteClick(product.name)}
+          >
             Solicitar Cotización — {product.name}
-          </a>
+          </button>
         </div>
       </div>
     </div>

@@ -1128,6 +1128,154 @@
 }
 
 /* ============================
+   QUOTE FORM (Block)
+   ============================ */
+.quote-form {
+  max-width: 560px;
+}
+
+.quote-form__header {
+  padding: 32px 32px 0;
+}
+
+.quote-form__title {
+  font-size: 24px;
+  font-weight: 700;
+  color: var(--gray-900);
+  margin-bottom: 6px;
+}
+
+.quote-form__subtitle {
+  font-size: 14px;
+  color: var(--gray-500);
+  line-height: 1.6;
+}
+
+.quote-form__body {
+  padding: 24px 32px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.quote-form__row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.quote-form__field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.quote-form__label {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.quote-form__input {
+  padding: 11px 14px;
+  border: 1px solid var(--gray-200);
+  border-radius: 10px;
+  font-size: 14px;
+  font-family: inherit;
+  color: var(--gray-900);
+  background: var(--white);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  outline: none;
+}
+
+.quote-form__input:focus {
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(196, 30, 36, 0.1);
+}
+
+.quote-form__input::placeholder {
+  color: var(--gray-400);
+}
+
+.quote-form__textarea {
+  resize: vertical;
+  min-height: 70px;
+}
+
+.quote-form__body .btn {
+  width: 100%;
+  margin-top: 4px;
+}
+
+/* Success state */
+.quote-form__success {
+  padding: 48px 32px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+.quote-form__success-icon {
+  width: 64px;
+  height: 64px;
+  background: rgba(34, 139, 34, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #228b22;
+  margin-bottom: 8px;
+}
+
+.quote-form__success-title {
+  font-size: 22px;
+  font-weight: 700;
+  color: var(--gray-900);
+}
+
+.quote-form__success-text {
+  font-size: 14px;
+  color: var(--gray-500);
+  line-height: 1.6;
+  max-width: 360px;
+}
+
+.quote-form__success-alt {
+  font-size: 13px;
+  color: var(--gray-400);
+  margin-top: 4px;
+}
+
+.quote-form__success-alt a {
+  color: var(--primary);
+  font-weight: 600;
+}
+
+.quote-form__success .btn {
+  margin-top: 12px;
+}
+
+@media (max-width: 640px) {
+  .quote-form__header {
+    padding: 24px 20px 0;
+  }
+
+  .quote-form__body {
+    padding: 20px;
+  }
+
+  .quote-form__row {
+    grid-template-columns: 1fr;
+  }
+
+  .quote-form__success {
+    padding: 32px 20px;
+  }
+}
+
+/* ============================
    FOOTER (Block)
    ============================ */
 .footer {

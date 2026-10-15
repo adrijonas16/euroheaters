@@ -1,6 +1,10 @@
 import { useSmoothScroll } from '../hooks/useSmoothScroll'
 
-export function Hero() {
+interface HeroProps {
+  onQuoteClick: () => void
+}
+
+export function Hero({ onQuoteClick }: HeroProps) {
   const { scrollTo } = useSmoothScroll()
 
   return (
@@ -35,13 +39,12 @@ export function Hero() {
           </div>
 
           <div className="hero__actions">
-            <a
-              href="#contacto"
+            <button
               className="btn btn--primary"
-              onClick={(e) => scrollTo(e, '#contacto')}
+              onClick={onQuoteClick}
             >
               Solicitar Cotización
-            </a>
+            </button>
             <a
               href="#especificaciones"
               className="btn btn--outline"

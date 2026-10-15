@@ -1,7 +1,11 @@
 import { CONTACT_INFO } from '../data/product'
 import { Icon } from './Icon'
 
-export function Contact() {
+interface ContactProps {
+  onQuoteClick: () => void
+}
+
+export function Contact({ onQuoteClick }: ContactProps) {
   return (
     <section className="section cta" id="contacto">
       <div className="section__inner">
@@ -17,9 +21,9 @@ export function Contact() {
           </p>
 
           <div className="cta__actions">
-            <a href={`mailto:${CONTACT_INFO.email}`} className="btn btn--primary-solid">
+            <button className="btn btn--primary-solid" onClick={onQuoteClick}>
               Solicitar Cotización
-            </a>
+            </button>
           </div>
 
           <div className="cta__contact">
